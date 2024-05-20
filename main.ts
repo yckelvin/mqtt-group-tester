@@ -1,3 +1,17 @@
+function VariableInit () {
+    topic = [
+    "e7NioMy4g",
+    "y0vioGy4R",
+    "6DFiTGs4R",
+    "c9cmTGs4R",
+    "nMKLS7yVg",
+    "EcbnHnsVg",
+    "3ozVH7s4R",
+    "CXw4iV-SR",
+    "RLS84pPIg",
+    "wmA84pPIg"
+    ]
+}
 input.onButtonPressed(Button.A, function () {
     microIoT.microIoT_SendMessage(convertToText(pins.analogReadPin(AnalogPin.P0)), microIoT.TOPIC.topic_0)
     microIoT.microIoT_initDisplay()
@@ -10,21 +24,11 @@ function publish (num: number, text: string) {
 input.onButtonPressed(Button.AB, function () {
     control.reset()
 })
+let topic: string[] = []
 let list: string[] = []
 let GroupID = 1
+VariableInit()
 basic.showNumber(0)
-let topic = [
-"e7NioMy4g",
-"y0vioGy4R",
-"6DFiTGs4R",
-"c9cmTGs4R",
-"nMKLS7yVg",
-"EcbnHnsVg",
-"3ozVH7s4R",
-"CXw4iV-SR",
-"RLS84pPIg",
-"wmA84pPIg"
-]
 let wifi_name = "izowifi"
 let password = "izo1234@"
 let iot_id = "UxrkoGs4R"
